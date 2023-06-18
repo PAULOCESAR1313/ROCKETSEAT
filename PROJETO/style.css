@@ -1,0 +1,32 @@
+@charset "UTF8";
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html
+{
+  /*
+  background-color: black;
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  /*agrupando aspropiedades em um unico comando: BACKGOUND*/
+  /*ORDEM DAS PROPIEDADES DENTRO DO BACKGROUD*/
+  /*backgound/: color image repet position/size*/
+  /*Obs: No caso do size temos que colocar uma barra antes*/
+
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+#conteiner
+{
+  width: 360px;
+  height: 712px;
+  margin: auto;
+  border: 2px solid red;
+}
