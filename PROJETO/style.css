@@ -23,10 +23,35 @@ body, html
   background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
 }
 
+body * 
+{
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
 #conteiner
 {
   width: 360px;
   height: 712px;
   margin: auto;
   border: 2px solid red;
+}
+
+#profile
+{
+  margin: 56px auto 0px;
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img
+{
+  width: 112px;
+}
+
+#profile p
+{
+  margin-top: 8px;
+  font-weight: 500px;
+  line-height: 40px;
 }
