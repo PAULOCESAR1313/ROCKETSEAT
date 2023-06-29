@@ -42,6 +42,7 @@ body, html
   /*backgound/: color image repet position/size*/
   /*Obs: No caso do size temos que colocar uma barra antes*/
 
+  height: 100vh;
   background: var(--bg-url) no-repeat top center/cover;
 }
 
@@ -53,7 +54,8 @@ body *
 
 #conteiner
 {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0px 24px;
 }
@@ -96,12 +98,21 @@ body *
   border: 0;
   border-radius: 50%;
   background: var(--switch-bg-url);
+  animation: slide-back 0.4s;
 }
 
 .light #switch button
 {
+  animation: slide-in 0.4s forwards;
+  /*
   left: initial;
   right: 0;
+  */
+}
+
+#switch button:hover
+{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span
@@ -177,4 +188,43 @@ footer
   padding: 24px 0px;
   font-size: 14px;
   text-align: center;
+}
+
+@media (min-width: 700px)
+{
+  :root
+  {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light
+  {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in
+{
+  from
+  {
+    left: 0;
+  }
+
+  to
+  {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back 
+{
+  from
+  {
+    left: 50%;
+  }
+
+  to
+  {
+    left: 0;
+  }
 }
